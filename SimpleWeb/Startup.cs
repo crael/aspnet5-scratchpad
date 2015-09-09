@@ -17,8 +17,7 @@ namespace SimpleWeb
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseStatusCodePages();
-            app.UseFileServer();
+            app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
