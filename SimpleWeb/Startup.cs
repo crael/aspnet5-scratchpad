@@ -12,14 +12,27 @@ namespace SimpleWeb
     {
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            app.Run(async (context) =>
+            app.UseStatusCodePages();
+            app.UseFileServer();
+
+            app.UseMvc(routes =>
             {
-                await context.Response.WriteAsync("Hello, world!");
+                routes.MapRoute(
+                    "controllerActionRoute",
+                    "{controller}/{action}",
+                    new { controller = "Home", action = "Index" },
+                    constraints: null,
+                    dataTokens: new { NameSpace = "default" });
+
+                routes.MapRoute(
+                    "controllerRoute",
+                    "{controller}",
+                    new { controller = "Home" });
             });
         }
     }
