@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "description": "SimpleWeb",
   "webroot": "wwwroot",
@@ -12,7 +12,10 @@
     "Microsoft.AspNet.Server.WebListener": "1.0.0-beta7",
     "Microsoft.AspNet.Mvc": "6.0.0-beta7",
     "Microsoft.AspNet.Diagnostics": "1.0.0-beta7",
-    "Microsoft.AspNet.StaticFiles": "1.0.0-beta7"
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta7",
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta7",
+    "Microsoft.Framework.Configuration.UserSecrets": "1.0.0-beta7",
+    "Microsoft.ApplicationInsights.AspNet": "1.0.0-beta7"
   },
   "frameworks": {
     "dnx451": { },
@@ -30,5 +33,6 @@
     "wwwroot",
     "node_modules",
     "bower_components"
-  ]
+  ],
+  "userSecretsId": "aspnet5-SimpleWeb-20150909010702"
 }

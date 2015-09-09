@@ -5,4 +5,18 @@
     ViewBag.Title = "Home Page";
 }
 
-Hello, world, this is the controller.
+@if (string.IsNullOrWhiteSpace(ViewBag.SecretName))
+{
+    if (string.IsNullOrWhiteSpace(ViewBag.PublicName))
+    {
+        @:Hello, sir or madame, I have no idea who you are.
+    }
+    else
+    {
+        @:Hello, @ViewBag.PublicName, I do know know your secret name.
+    }
+}
+else
+{
+    @:Hello, @ViewBag.PublicName, or should I say @ViewBag.SecretName?!?!  dun-dun-DUN!
+}
